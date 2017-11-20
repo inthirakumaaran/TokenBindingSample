@@ -1,20 +1,17 @@
 # TokenBindingSample
 This is a **Php  sample** application for WSO2 Identity server.
 
-This applicaiton is less GUI friendly in navigation (have to type URL address to go to pages) 
-but much friendlier in sending the request
+This applicaiton can generate simple oauth requests that can support token binding.Can be used to check normal applicaiton also.
 
 
 How to run:
-1. Host this application in lampp or nginx (any php webserver) 
-2. Type the address to go to the relevant pages and send the request
-3. Get the response in callback URL
+1. Change the IS address in the code to your IS server address (default addres : https://localhost/oauth2)
+2. Host this application in lampp or nginx (any php webserver) 
+3. How to the index page and select the grant type
+4. Fill the detail and get the response in callback URL
+
+concerns:
+* In authorzation code type it will send PKCE headers related to token binding.So for normal usage don't use this grant type unless you have token binding supported IS version.
 
 
-Addresses For:
-1. authorization code - /
-2. authorization token request - /authorizationcode.php
-3. password grandtype - /password.php
-4. refresh token - /refreshtoken.php
-5. introspection point - /introspect.php
-6. Callback URL - /callback.php
+
