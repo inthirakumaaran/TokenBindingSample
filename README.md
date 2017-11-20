@@ -11,7 +11,7 @@ How to run:
 4. Fill the details and get the response in callback URL
 
 concerns:
-* In authorzation code type it will send PKCE headers related to token binding.So for normal usage don't use this grant type unless you have token binding supported IS version.
+* In authorization code type it will send PKCE headers related to token binding. So for normal usage don't use this grant type unless you have token binding supported IS version.
 
 
 
