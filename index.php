@@ -1,40 +1,50 @@
-<?php include "/opt/lampp/htdocs/password/layout/header.php";?>
+<?php include "/opt/lampp/htdocs/password/layout/header.php"; ?>
 
-<body>
-<br>
-<h2 class="col-md-offset-3 col-md-5">Try for AuthCode TB</h2>
-<form name ="myForm"  action="redirect.php" method="POST" enctype="application/x-www-form-urlencoded" class="col-md-offset-3 col-md-5">
-    <div class="form-group">
-        <label>Client ID</label>
-        <div> <input type="text" name="client_id" class="form-control" placeholder="client ID" ></br> </div>
 
-    </div> <div class="form-group">
-        <label>Client Secret</label>
-        <div> <input type="text" name="client_secret" class="form-control" placeholder="client secret" ></br> </div>
+<h2 class="col-md-offset-3 col-md-5">GRANT TYPE</h2>
 
+<div class="container  col-md-offset-3 col-md-5">
+    <div>
+        <button id="code" class="btn btn-info" style="margin-top:50px">AUTHORIZATION_CODE</button>
     </div>
-    <div class="form-group">
-        <label>Grant type</label>
-        <div> <input type="text" name="grant_type" class="form-control" placeholder="grant type" ></br> </div>
-
-<!--    </div> <div class="form-group">-->
-<!--        <label>Username</label>-->
-<!--        <div> <input type="text" name="username" class="form-control" placeholder="username" ></br> </div>-->
-<!---->
-<!--    </div>-->
-<!--     <div class="form-group">-->
-<!--        <label>Password</label>-->
-<!--        <div> <input type="text" name="password" class="form-control" placeholder="password" ></br> </div>-->
-<!---->
-<!--    </div>-->
-    <div class="form-group">
-        <label>Redirect URI</label>
-        <div> <input type="text" name="redirect_uri" class="form-control" placeholder="redirect uri" ></br> </div>
-
+    <div>
+        <button id="auth" class="btn btn-primary" style="margin-top:25px">AUTHORIZATION</button>
     </div>
-    <button id="BB"type="submit" class="btn btn-primary" value="Submit">Submit</button>
+    <div>
+        <button id="password" class="btn btn-success" style="margin-top:25px">PASSWORD</button>
+    </div>
+    <div>
+        <button id="refresh" class="btn btn-warning" style="margin-top:25px">REFRESH</button>
+    </div>
+    <div>
+        <button id="introspect" class="btn btn-danger" style="margin-top:25px">INTROSPECT</button>
+    </div>
+</div>
 
-</form>
-<?php include "/opt/lampp/htdocs/password/layout/footer.php";?>
+<script>
+    var password = document.getElementById('password');
+    password.addEventListener('click', function () {
+        document.location.href = 'password.php';
+    });
+    var code = document.getElementById('code');
+    code.addEventListener('click', function () {
+        document.location.href = 'code.php';
+    });
+    var auth = document.getElementById('auth');
+    auth.addEventListener('click', function () {
+        document.location.href = 'authorization.php';
+    });
+    var refresh = document.getElementById('refresh');
+    refresh.addEventListener('click', function () {
+        document.location.href = 'refresh.php';
+    });
+
+    var introspect = document.getElementById('introspect');
+    introspect.addEventListener('click', function () {
+        document.location.href = 'introspect.php';
+    });
+
+</script>
 
 
+<?php include "/opt/lampp/htdocs/password/layout/footer.php"; ?>
