@@ -1,11 +1,11 @@
 # TokenBindingSample
-This is a **Php  sample** application for WSO2 Identity server.
+This is a **Php based Oauth sample** application for WSO2 Identity server.
 
-This applicaiton can generate simple oauth requests that can support token binding.Can be used to check normal applicaiton also.
+This applicaiton can generate simple oauth requests that can support **Token binding**.Can be used to check normal oauth requests also.
 
 
 How to run:
-1. Change the IS address in the code to your IS server address (default addres : https://localhost/oauth2)
+1. Change the IS address in the code to your IS server address (default address : https://localhost/oauth2)
 2. Host this application in lampp or nginx (any php webserver) 
 3. How to the index page and select the grant type
 4. Fill the detail and get the response in callback URL
